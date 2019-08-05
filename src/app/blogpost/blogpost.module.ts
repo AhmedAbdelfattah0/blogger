@@ -13,6 +13,7 @@ import { CategoriesComponent } from './categories/categories.component';
     CommonModule,
     BlogpostRoutingModule
   ],
-  declarations: [BlogpostFeaturedComponent, BlogpostListComponent, BlogpostDetailComponent, BlogpostRecentComponent, CategoriesComponent]
+  declarations: [BlogpostFeaturedComponent, BlogpostListComponent, BlogpostDetailComponent, BlogpostRecentComponent, CategoriesComponent],
+  exports: [BlogpostFeaturedComponent]
 })
 export class BlogpostModule { }
