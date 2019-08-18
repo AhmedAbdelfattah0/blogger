@@ -10,6 +10,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BlogpostModule } from './blogpost/blogpost.module';
   import { CmspageModule } from './cmspage/cmspage.module';
   
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { BlogpostModule } from './blogpost/blogpost.module';
     HttpClientModule,
     BlogpostModule ,
     CmspageModule ,
-    AppRoutingModule
+    AdminModule,
+    AuthModule,
+    AppRoutingModule,
   ],
   providers: [Title],
   bootstrap: [AppComponent]
