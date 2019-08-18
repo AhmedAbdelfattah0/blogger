@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+    import { BlogpostService } from '../blogpost.service';
+    import { Category } from '../category';
 
-@Component({
-  selector: 'app-categories',
-  templateUrl: './categories.component.html',
-  styleUrls: ['./categories.component.css']
-})
-export class CategoriesComponent implements OnInit {
+    @Component({
+      selector: 'app-categories',
+      templateUrl: './categories.component.html',
+      styleUrls: ['./categories.component.css']
+    })
+    export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+      categories: Category;
+      error: {};
 
-  ngOnInit() {
-  }
+      constructor(private blogpostService: BlogpostService) { }
 
-}
+      ngOnInit() {
+        this.blogpostService.getCategories().subscribe(
+          (data: Category) => this.categories = data
+        );
+      }
+    }
