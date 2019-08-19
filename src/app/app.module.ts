@@ -1,5 +1,5 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
- import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,8 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BlogpostModule } from './blogpost/blogpost.module';
-  import { CmspageModule } from './cmspage/cmspage.module';
-  
+import { CmspageModule } from './cmspage/cmspage.module';
+import { httpInterceptorProviders } from './http-interceptors/index';
+
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 @NgModule({
@@ -23,13 +24,16 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    BlogpostModule ,
-    CmspageModule ,
+    BlogpostModule,
+    CmspageModule,
     AdminModule,
     AuthModule,
     AppRoutingModule,
   ],
-  providers: [Title],
+  providers: [
+    Title,
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
