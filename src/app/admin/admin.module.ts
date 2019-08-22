@@ -7,12 +7,15 @@ import { AdminComponent } from './admin/admin.component';
 import { ManageBlogsComponent } from './manage-blogs/manage-blogs.component';
 import { ManageCategoriesComponent } from './manage-categories/manage-categories.component';
 import { ManagePagesComponent } from './manage-pages/manage-pages.component';
+import { ReactiveFormsModule  } from '@angular/forms';
+import { BlogFormComponent } from './blog-form/blog-form.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     AdminRoutingModule
   ],
-  declarations: [AdminDashboardComponent, AdminComponent, ManageBlogsComponent, ManageCategoriesComponent, ManagePagesComponent]
+  declarations: [AdminDashboardComponent, AdminComponent, ManageBlogsComponent, ManageCategoriesComponent, ManagePagesComponent, BlogFormComponent]
 })
 export class AdminModule { }
