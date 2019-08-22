@@ -6,7 +6,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ManageBlogsComponent } from './manage-blogs/manage-blogs.component';
 import { ManageCategoriesComponent } from './manage-categories/manage-categories.component';
 import { ManagePagesComponent } from './manage-pages/manage-pages.component';
-
+import { BlogFormComponent } from './blog-form/blog-form.component';
 import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
@@ -21,7 +21,9 @@ const routes: Routes = [
         { path: 'blogs', component: ManageBlogsComponent },
         { path: 'categories', component: ManageCategoriesComponent },
         { path: 'pages', component: ManagePagesComponent },
-        { path: '', component: AdminDashboardComponent }
+        { path: '', component: AdminDashboardComponent },
+        { path: 'blogs/create', component: BlogFormComponent },
+        { path: 'blogs/edit/:id', component: BlogFormComponent },
       ],
     }
   ]
