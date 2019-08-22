@@ -25,5 +25,8 @@ export class BlogpostFeaturedComponent implements OnInit {
       (data: Blogpost) => this.blogs = data,
       error => this.error = error
     );
+
+
+    // this.titleService.getTitle('')
   }
 }
