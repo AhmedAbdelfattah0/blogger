@@ -4,13 +4,15 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Contact } from './contact';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CmspageService {
 
-  ServerUrl = 'http://codemaxwit.com/ciapi/';
+     ServerUrl = environment.serverUrl;
+
   errorData: {};
 
   httpOptions = {

@@ -4,12 +4,13 @@ import { HttpClient, HttpErrorResponse, HttpBackend } from '@angular/common/http
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Category } from './category';
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class BlogpostService {
 
-  ServerUrl = 'http://codemaxwit.com/ciapi/';
+  ServerUrl = environment.serverUrl;
   errorData: {};
 
   private http: HttpClient;
