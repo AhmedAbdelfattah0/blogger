@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverUrl : 'http://codemaxwit.com/ciapi/'
+  serverUrl : 'https://codemaxwit.com/ciapi/'
 };
 
 /*
