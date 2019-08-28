@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  serverUrl: 'https://codemaxwit.com/ciapi/'
+  serverUrl: 'https://angular-demo-app.000webhostapp.com/blogger/'
 };
