@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverUrl : 'https://angular-demo-app.000webhostapp.com/blogger/'
+  serverUrl : 'https://theofferz.com/blogger/'
 };
 
 /*
